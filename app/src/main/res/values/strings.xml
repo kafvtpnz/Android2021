@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">lab12</string>
+    <string-array name="arr_sot">
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+        <item>Леша</item>
+        <item>Сява</item>
+    </string-array>
+</resources>

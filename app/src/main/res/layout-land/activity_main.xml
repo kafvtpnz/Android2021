@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#0B61A4">
+
+            <EditText
+                android:id="@+id/edit_txt"
+                android:layout_width="615dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#66A3D2"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="#0B61A4"
+            android:clickable="true"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/Button_language"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#66A3D2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="RUS/ENG"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/Button_add"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#66A3D2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Добавить"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/Button_remove"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#FF0000"
+                android:padding="5dp"
+                android:text="Удалить"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="120dp"
+            android:layout_marginTop="45dp">
+
+        </ListView>
+        <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#222222"
+            android:gravity="center"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Добавить"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:padding="5dp"
+                android:layout_marginLeft="15dp"
+                android:text="Удалить"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>-->
+    </RelativeLayout>
+</RelativeLayout>

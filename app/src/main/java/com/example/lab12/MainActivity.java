@@ -2,10 +2,12 @@ package com.example.lab12;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     final ArrayList<String> staff= new ArrayList<>();
     ListView lvMain;
     ArrayAdapter<String> adapter;
-
+    boolean service_on = false;
     final Looper looper = Looper.getMainLooper();
     final Handler handler = new Handler(looper) {
         @Override
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         Button button_lan=(Button) findViewById(R.id.Button_language);
         Button button_add=(Button) findViewById(R.id.Button_add);
         Button button_rem=(Button) findViewById(R.id.Button_remove);
+        Button button_serv_start=(Button) findViewById(R.id.Button_serv_start);
+        Button button_serv_end=(Button) findViewById(R.id.Button_serv_end);
         final String[] remove_Item = new String[1];
 
         adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, staff);
@@ -67,6 +71,20 @@ public class MainActivity extends AppCompatActivity {
                 }}
         });
 
+        button_serv_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,MyService.class);
+                    startService(i);
+            }
+        });
+        button_serv_end.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,MyService.class);
+                stopService(i);
+            }
+        });
         lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -99,6 +117,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
     @Override
     protected void onRestoreInstanceState(Bundle state){
         super.onRestoreInstanceState(state);
@@ -110,5 +130,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
         outState.putStringArrayList("st",staff);
+    }
+    @Override
+    protected void onDestroy(){
+        Intent i = new Intent(this,MyService.class);
+        stopService(i);
+        super.onDestroy();
     }
 }

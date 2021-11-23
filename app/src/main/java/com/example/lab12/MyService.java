@@ -34,7 +34,7 @@ public class MyService extends Service {
                     Thread.sleep(1000);
                     if (isRunning) {
                         mRandomNumber = new Random().nextInt(1000);
-                        Log.i(TAG, "Thread " + "Random Number: " + mRandomNumber);
+                        Log.i(TAG,  "Random Number from service: " + mRandomNumber);
                     }
                 } catch (InterruptedException e) {
                     Log.i(TAG, "Thread Interrupted");
